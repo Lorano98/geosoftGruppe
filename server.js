@@ -7,7 +7,7 @@ server.listen(port, host); // say where the server should listen
 // say what the server should do, when it gets an incoming request
 function handleRequest(req, res) {
     res.writeHead(200, { 'Content-Type': 'text/html' });
-    res.write('Hellooooooo');
+    res.write('Helloooooooooooo');
     res.end();
 }
 console.log(`Server is running on ${host}:${port}`);

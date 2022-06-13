@@ -1,0 +1,26 @@
+{
+    "name": "package",
+    "version": "1.0.0",
+    "description": "This is my first package",
+    "main": "demoserver.js",
+    "scripts": {
+        "server": "node server.js"
+    },
+    "keywords": [
+        "101",
+        "firstpackage"
+    ],
+    "author": "Auriol Degbelo",
+    "license": "ISC",
+    "dependencies": {
+        "express": "^4.18.1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Lorano98/geosoftGruppe.git"
+    },
+    "bugs": {
+        "url": "https://github.com/Lorano98/geosoftGruppe/issues"
+    },
+    "homepage": "https://github.com/Lorano98/geosoftGruppe#readme"
+}
