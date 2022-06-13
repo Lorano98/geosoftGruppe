@@ -1,27 +1,16 @@
 {
-    "name": "package",
-    "version": "1.0.0",
-    "description": "This is my first package",
-    "main": "demoserver.js",
-    "scripts": {
-        "server": "node server.js"
-    },
-    "keywords": [
-        "101",
-        "firstpackage"
-    ],
-    "author": "Auriol Degbelo",
-    "license": "ISC",
-    "dependencies": {
-        "express": "^4.18.1",
-        "mongodb": "^4.7.0"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/Lorano98/geosoftGruppe.git"
-    },
-    "bugs": {
-        "url": "https://github.com/Lorano98/geosoftGruppe/issues"
-    },
-    "homepage": "https://github.com/Lorano98/geosoftGruppe#readme"
+  "name": "geosoftgruppe",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "morgan": "~1.9.1",
+    "pug": "2.0.0-beta11"
+  }
 }
