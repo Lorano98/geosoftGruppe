@@ -1,10 +1,13 @@
-var http = require('http'); // 1 - Import Node.js core module
-
-var server = http.createServer(function (req, res) {
-    // 2 - creating server
-    //handle incomming requests here..
-});
-
-server.listen(5000); //3 - listen for any incoming requests
-
-console.log('Node.js web server at port 5000 is running..');
+// Expanded Version
+let http = require('http'); // use an existing module from node
+let host = 'localhost'; // 127.0.0.1
+let port = 5000;
+let server = http.createServer(handleRequest); // create a server
+server.listen(port, host); // say where the server should listen
+// say what the server should do, when it gets an incoming request
+function handleRequest(req, res) {
+    res.writeHead(200, { 'Content-Type': 'text/html' });
+    res.write('Hellooooooo');
+    res.end();
+}
+console.log(`Server is running on ${host}:${port}`);
