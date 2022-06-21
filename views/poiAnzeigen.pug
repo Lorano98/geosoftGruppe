@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  h1= title
+  #map
+  
+  script.
+    let geojson = !{JSON.stringify(data)}
+
+  script(src='javascripts/poiAnzeigen.js', defer)

@@ -1,5 +1,8 @@
 var mark = null;
+var coords = null;
 var nameInput = document.getElementById('name');
+var xInput = document.getElementById('x');
+var yInput = document.getElementById('y');
 
 // Karte mit Zentrum definieren
 var map = L.map('map').setView([51.96, 7.62], 13);
@@ -31,13 +34,18 @@ map.on(L.Draw.Event.CREATED, function (e) {
     mark = e.layer;
     map.addLayer(mark);
 
-    let coords = e.layer.getLatLng();
+    coords = e.layer.getLatLng();
+    xInput.value = coords.lat;
+    yInput.value = coords.lng;
     console.log(coords);
 });
 
-// Löschen des letzten Rectangle
+// Löschen des letzten Punkts
 map.on(L.Draw.Event.DRAWSTART, function (e) {
     if (mark != null) {
         map.removeLayer(mark);
+        coords = null;
+        xInput.value = '';
+        yInput.value = '';
     }
 });
