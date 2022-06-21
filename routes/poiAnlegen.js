@@ -14,14 +14,12 @@ router.get('/', function (req, res, next) {
 });
 
 router.post('/finish', function (req, res, next) {
+    if (req.body.y == null || req.body.y == '' || req.body.x == null || req.body.x == '') {
+        res.send('Keine Koordinaten vorhanden' + '<br><a href="/poiAnlegen">Zurück</a> ');
+    }
     console.log('A new poi has been added');
 
     console.log(req.body);
-    /*
-    let poi = {};
-    poi.name = req.body.pname;
-    poi.coordinates = [req.body.x, req.body.y];
-*/
 
     let poi = {
         type: 'Feature',

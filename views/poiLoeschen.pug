@@ -1,8 +1,6 @@
 extends layout
 
 block content
-
-block content
   h1= title
 
   form(action='/poiLoeschen/finish' method='post')
@@ -13,7 +11,3 @@ block content
           input#poiname.form-control(type='text' name="name" placeholder='Enter POI Name')
       button.btn.btn-primary.mb-2(type='submit') Loeschen
  
-  //script.
-    let geojson = !{JSON.stringify(data)}
-
-  //script(src='javascripts/poiAnzeigen.js', defer)
