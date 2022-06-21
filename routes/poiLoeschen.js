@@ -13,6 +13,7 @@ router.get('/', function (req, res, next) {
     res.render('poiLoeschen', { title: 'POI Löschen' });
 });
 
+// Wird ausgeführt, wenn der Löschen Button gedrückt wurde
 //Post Location - this post operation can be used to store new locations in the locations collection
 router.post('/finish', function (req, res, next) {
     console.log('Deleted!');
