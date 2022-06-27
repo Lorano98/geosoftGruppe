@@ -1,0 +1,23 @@
+# yml template to dockerise a node.js app
+version: '1'
+services:
+ appservice:
+ container_name: mynodeapp
+ build: .
+ ports:
+ - '4000:3000'
+ depends_on:
+ - mongoservice
+ mongoservice:
+   container_name: mongo
+   image: mongo
+
+   volumes:
+ ports:
+ - '27017:27017'
+
+ mongoexpressservice:
+    image: mongo-express
+    restart: always
+    ports: '0001:0001'
+    depends on: mongoservice
