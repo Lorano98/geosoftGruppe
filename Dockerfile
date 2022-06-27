@@ -16,4 +16,4 @@ RUN npm install
 COPY . .
 
 EXPOSE 1337
-CMD [ "node", "server.js" ]
+CMD [ "npm", "start" ]
