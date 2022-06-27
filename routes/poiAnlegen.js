@@ -36,9 +36,6 @@ router.post('/finish', function (req, res, next) {
         }
     };
 
-    console.log('Parse:');
-    console.log(poi);
-
     // connect to the mongodb database and afterwards, insert one the new element
     client.connect(function (err) {
         console.log('Connected successfully to server');
