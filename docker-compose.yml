@@ -1,23 +1,33 @@
 # yml template to dockerise a node.js app
-version: '1'
+version: '2.2'
 services:
- appservice:
- container_name: mynodeapp
- build: .
- ports:
- - '4000:3000'
- depends_on:
- - mongoservice
- mongoservice:
-   container_name: mongo
-   image: mongo
+    appservice:
+        image: lorano/node-web-app
+        build: .
+        ports:
+            - '4000:3000'
+        depends_on:
+            - mongo
+        networks:
+            - default
+    mongo:
+        image: mongo
+        ports:
+            - '27017:27017'
+        networks:
+            - default
+        volumes:
+            - ./mongodb:/data/db
+    mongoexpressservice:
+        image: mongo-express
+        restart: always
+        ports:
+            - '8081:8081'
+        depends_on:
+            - mongo
+        networks:
+            - default
 
-   volumes:
- ports:
- - '27017:27017'
-
- mongoexpressservice:
-    image: mongo-express
-    restart: always
-    ports: '0001:0001'
-    depends on: mongoservice
+networks:
+    default:
+        driver: bridge
