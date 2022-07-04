@@ -15,6 +15,7 @@ Aufgabe 7:
 
 - download docker-compose.yaml file
 - go to CLI and run 'docker-compose up' at the path of docker-compose.yaml file
+- open http://localhost:4000/
 
 Path to Dockerhub:
 https://hub.docker.com/repository/docker/lorano/aufgabe07
